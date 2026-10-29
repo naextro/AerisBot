@@ -1,0 +1,7 @@
+services:
+  discord-ai-bot:
+    build: .
+    container_name: aerix-discord-bot
+    restart: unless-stopped
+    env_file:
+      - .env

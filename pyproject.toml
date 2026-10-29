@@ -1,0 +1,29 @@
+[project]
+name = "discord-ai-bot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "naextro", email = "riham.tangail@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "discord-py>=2.4.0",
+    "openai>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "structlog>=24.0.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+asyncio_mode = "auto"
